@@ -1,0 +1,73 @@
+/* base */
+body { 
+    background: #fff;
+    padding: 100px 300px;
+}
+body *, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+/* 작업 */
+#ck-wrap,
+#ck-wrap label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 40px;
+}
+#ck-wrap .input-none {
+    overflow: hidden;
+    position: absolute !important;
+    clip:     rect(0,0,0,0);
+    width:    1px;
+    height:   1px;
+    margin:   -1px;
+    border:   0;
+    padding:  0;
+}
+#ck-wrap .input-none+label {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border: 2px solid #ddd;
+    background-color: #f0f0f0;
+    font-size: 15px;
+    color: #aaa;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    cursor: pointer;
+}
+#ck-wrap .input-none+label::before {
+    margin: 0 5px 0 0;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+#ck-wrap .input-none:checked+label {
+    border-color: #1bdbf8;
+    background-color: #12bbd4;
+    color: #fff;
+}
+#ck-wrap .input-none:checked+label::before {
+    content: '\e802';
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+#ck-wrap .input-none:focus+label {
+    border-color: #e9a1ff;
+}

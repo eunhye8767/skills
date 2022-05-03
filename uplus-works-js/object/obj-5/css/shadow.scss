@@ -1,0 +1,33 @@
+$bg-color: #eee;
+$color-wh: #fff;
+$shadow-color: #f12711;
+
+@function shadow($color, $depth) {
+  $val: 0 0 $color;
+  @for $i from 1 through $depth {
+    $hue: adjust-hue($color, $i * 0.1);
+    $val: #{$val}, -#{$i}px #{$i * 0.5}px $hue;
+  }
+  $extra1: ', 0 -1px ' $color;
+  $extra2: ', 1px 0 ' $color;
+  $extra3: ', 1px 1px ' $color;
+  @return $val + $extra1 + $extra2 + $extra3;
+}
+
+#text-longShadow-box {
+    width: 1000px;
+    margin-top: 100px;
+    padding-left: 200px;
+    font: italic 700 60px/1 'Montserrat', sans-serif;
+    color: $color-wh;
+    p.tt-shadow {
+        @for $i from 1 through 7 {
+            &:nth-child(#{$i}) {
+              transform: translateX(20px * $i);
+            }
+        }
+    }
+}
+.tt-shadow {
+    text-shadow: shadow($shadow-color, 1000);
+}

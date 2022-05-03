@@ -1,0 +1,105 @@
+/* base */
+body *, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.a11y-hidden {
+    overflow: hidden;
+    position: absolute !important;
+    clip:     rect(0,0,0,0);
+    width:    1px;
+    height:   1px;
+    margin:   -1px;
+    border:   0;
+    padding:  0;
+}
+/* .img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+} */
+
+
+/* 작업 */
+.demo.-btn.-n10 {
+    height: 100vh; 
+    background: #333;
+    padding: 10%;
+}
+.demo.-btn.-n10 .img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+.demo.-btn.-n10 .h-100 { height: 100%;}
+.demo.-btn.-n10 .dp-b  { display: block;}
+.demo.-btn.-n10 .dp-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.demo.-btn.-n10 .flex-100 {
+    -webkit-box-flex: 0;
+       -ms-flex: 0 0 100%;
+           flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+}
+.demo.-btn.-n10 .flex-wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.demo.-btn.-n10 .trans-3s {
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+.demo.-btn.-n10 .align-cen {
+    -webkit-box-align: center;
+       -ms-flex-align: center;
+          align-items: center;
+}
+.demo.-btn.-n10 .mg-x-at { margin-left: auto; margin-right: auto;}
+.demo.-btn.-n10 .link-hover-ev { 
+    width: 30%;
+    max-width: 60px;
+    overflow: hidden;
+    position: relative;
+}
+.demo.-btn.-n10 .link-hover-ev:hover .-icon {
+    transform: translateX(-60px);
+    -webkit-transform: translateX(-60px);
+    -moz-transform: translateX(-60px);
+    -ms-transform: translateX(-60px);
+    -o-transform: translateX(-60px);
+}
+.demo.-btn.-n10 .link-hover-ev .-txt {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(100%, -50%);
+    -webkit-transform: translate(70%, -50%);
+    -moz-transform: translate(70%, -50%);
+    -ms-transform: translate(70%, -50%);
+    -o-transform: translate(70%, -50%);
+    opacity: 0;
+}
+.demo.-btn.-n10 .link-hover-ev:hover .-txt {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    opacity: 1;
+}

@@ -1,0 +1,43 @@
+/* base */
+body {
+    background: transparent;
+    font-family: '맑은 고딕','Malgun Gothic','애플 SD 산돌고딕 Neo','Apple SD Gothic Neo','Helvetica Neue','Helvetica',sans-serif;
+    font-size: 16px;
+    color: #fff;
+    word-break: keep-all;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+}
+body *, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    line-height: .95;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* 작업 */
+#bubble-wrap {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: #fca7f0; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #fca7f0 0%, #8adffa 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #fca7f0 0%,#8adffa 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #fca7f0 0%,#8adffa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fca7f0', endColorstr='#8adffa',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+#bubble {
+    width: 100%;
+    width: calc( 100% + 8px);
+    height: 100%;
+    height: calc( 100% + 8px);
+    margin: -4px;
+}

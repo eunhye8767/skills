@@ -1,0 +1,71 @@
+/* base */
+body {
+    background: transparent;
+    font-family: 'Malgun Gothic','애플 SD 산돌고딕 Neo','Apple SD Gothic Neo','Helvetica Neue','Helvetica',sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    color: #fff;
+    word-break: keep-all;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+}
+body *, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    line-height: .95;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* 작업 */
+/* #text-longShadow-box {
+    margin: 100px 0 0 500px;
+}
+.tt-shadow { 
+    text-shadow: 1px -1px hsl(348, 97%, 63%),
+                 0 -1px hsl(348, 97%, 63%),
+                 -1px -1px hsl(348, 97%, 63%),
+                 -2px 0px hsl(348, 97%, 63%),
+                 -3px 1px hsl(348, 97%, 63%),
+                 -4px 2px hsl(348, 97%, 63%),
+                 -5px 3px hsl(348, 97%, 63%),
+                 -6px 4px hsl(348, 97%, 63%),
+                 -7px 5px hsl(348, 97%, 63%),
+                 -8px 6px hsl(348, 97%, 63%),
+                 -9px 7px hsl(348, 97%, 63%),
+                 -10px 8px hsl(348, 97%, 63%),
+                 -11px 9px hsl(348, 97%, 63%),
+                 -12px 10px hsl(348, 97%, 63%),
+                 -13px 11px hsl(348, 97%, 63%),
+                 -14px 12px hsl(348, 97%, 63%),
+                 -15px 13px hsl(348, 97%, 63%),
+                 -16px 14px hsl(348, 97%, 63%),
+                 -17px 15px hsl(348, 97%, 63%),
+                 -18px 16px hsl(348, 97%, 63%),
+                 -19px 17px hsl(348, 97%, 63%),
+                 -20px 18px hsl(348, 97%, 63%),
+                 -21px 19px hsl(348, 97%, 63%),
+                 -22px 20px hsl(348, 97%, 63%),
+                 -23px 21px hsl(348, 97%, 63%),
+                 -24px 22px hsl(348, 97%, 63%),
+                 -25px 23px hsl(348, 97%, 63%),
+                 -26px 24px hsl(348, 97%, 63%),
+                 -27px 25px hsl(348, 97%, 63%),
+                 -28px 26px hsl(348, 97%, 63%),
+                 -29px 27px hsl(348, 97%, 63%),
+                 -30px 28px hsl(348, 97%, 63%),
+                 -31px 29px hsl(348, 97%, 63%),
+                 -32px 30px hsl(348, 97%, 63%),
+                 -33px 31px hsl(348, 97%, 63%),
+                 -34px 32px hsl(348, 97%, 63%),
+                 -35px 33px hsl(348, 97%, 63%)
+                 
+                 200px 200px hsl(230, 96%, 62%);
+}*/

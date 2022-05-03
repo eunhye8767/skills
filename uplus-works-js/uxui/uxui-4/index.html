@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover-회전효과</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="container">
+        <div id="flipping-cards">
+            <div class="card-wrap">
+                <div class="card">
+                    <div class="card-item -front -n1"></div>
+                    <div class="card-item -back">
+                        <div class="hv-content">마우스 HOVER 회전효과<br>.5초</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrap">
+                <div class="card">
+                    <div class="card-item -trans-v1 -front -n2"></div>
+                    <div class="card-item -trans-v1 -back">
+                        <div class="hv-content">마우스 HOVER 회전효과<br>1초</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrap">
+                <div class="card">
+                    <div class="card-item -trans-v2 -front -n3"></div>
+                    <div class="card-item -trans-v2 -back">
+                        <div class="hv-content">마우스 HOVER 회전효과<br>2초</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrap">
+                <div class="card">
+                    <div class="card-item -trans-v3 -front -n4"></div>
+                    <div class="card-item -trans-v3 -back">
+                        <div class="hv-content">마우스 HOVER 회전효과<br>3초</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var element = document.getElementByClassName('-back');
+        element.classList.add('-dp-no');
+        window.setTimeout(function () {
+            element.classList.remove('-dp-no');
+        }, 1000);
+    </script>
+
+</body>
+</html>

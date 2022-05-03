@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+#container {
+    width: 100%;
+    min-width: 140rem;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: 7rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: #fff;
+    border-bottom: .1rem solid #dfdfdf;
+}
+header > h2 {
+    padding-left: 2rem;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #111;
+}
+
+/* contents */
+#contents { padding: 4rem 2rem;}
+
+.table-title-box { margin: 7rem 0 1.5rem;}
+.table-title-box h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    text-transform: capitalize;
+}
+.table-title-box h3.ft-up { text-transform: uppercase;}
+
+.list-state-box p { margin-left: 1rem; color: #666;}
+.list-state-box p:not(:first-of-type)::before { content: '/'; margin-right: 1rem; color: #ccc;}
+.list-state-box .txt-num::after { content: ':'; padding: 0 .5rem;}
+.list-state-box .apply-txt { color: #ff6c6a;}
+
+.table-box {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #666;
+}
+.table-box thead {
+    border-top: .1rem solid #666;
+    border-bottom: .1rem solid #ccc;
+    background: #f7f7f7;
+}
+.table-box thead th, .table-box tbody td { padding: 1.5rem 2rem;}
+.table-box thead th { color: #333;}
+.table-box tbody td { 
+    vertical-align: middle;
+    line-height: 1.6;
+    border-bottom: .1rem solid #dfdfdf;
+}
+.table-box tbody td:not(:first-of-type) { border-left: .1rem solid #dfdfdf;}
+.table-box tbody td:first-of-type, 
+.table-box tbody td:last-of-type { 
+    padding-left: 0;
+    text-align: center;
+}
+.table-box tr:hover { background: #eee;}

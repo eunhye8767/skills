@@ -1,0 +1,65 @@
+@charset "UTF-8";
+ 
+/* base */
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+}
+body {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    -webkit-text-size-adjust:none;
+    background: #f0f0f0;
+    font-family: "Noto Sans Korean", '맑은 고딕','Malgun Gothic','애플 SD 산돌고딕 Neo','Apple SD Gothic Neo','Helvetica Neue','Helvetica',sans-serif;
+    font-size: 1.6rem;
+    color: #444;
+    word-break: keep-all;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+}
+body *, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    line-height: .7;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* 작업 */
+#eventWrap {
+    width: 100%;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+#sec1 .title { top: 9.3%;}
+#sec1 .title .title-motion {
+    top: 41.6%;
+    left: 23%;
+    width: 35.2%;
+    transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    animation: tit-shake .6s infinite alternate both;
+    -webkit-animation: tit-shake .6s infinite alternate both;
+    -moz-animation: tit-shake .6s infinite alternate both;
+    -o-animation: tit-shake .6s infinite alternate both;
+}
+#leaf-motion { 
+    width: 100%;
+    height: 50%;
+}
+.leaf{
+    width: 62px;
+    height: 62px;
+    position:absolute;
+    background: url('../img/sec1_leaf.png');
+    background-size: contain;
+}

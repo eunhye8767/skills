@@ -1,0 +1,49 @@
+.a11y-hidden {
+    overflow: hidden;
+    position: absolute !important;
+    clip:     rect(0,0,0,0);
+    width:    1px;
+    height:   1px;
+    margin:   -1px;
+    border:   0;
+    padding:  0;
+}
+
+.link_pg {
+    display: -webkit-box; display: -ms-flexbox; display: flex;
+    -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+}
+.link_pg::after {
+    content: '';
+    width: 1.6rem;    
+    height: 1.6rem;
+    margin-left: 1rem;
+    background: url('../img/icon-newpg.png') center no-repeat;
+    background-size: contain;
+}
+.link_pg.-gr::after { background-image: url('../img/icon-newpg-gr.png');}
+
+.apply::after { content: '적용'; color: #ff6c6a;}
+.tba::after { content: '예정'; color: #111;}
+.ing::after { content: '작업중'; color: #3887d7;}
+
+/* postion */
+.pst-r  { position: relative;}
+.pst-ab { position: absolute;}
+
+/* display */
+.dp-b  { display: block;}
+.dp-ib { display: inline-block;}
+.dp-flex, .flex-cen   { display: -webkit-box; display: -ms-flexbox; display: flex;}
+.just-cen, .flex-cen  { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;}
+.align-cen, .flex-cen { -webkit-box-align: center; -ms-flex-align: center; align-items: center;}
+.just-start  { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start;}
+.align-start { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start;}
+.just-end  { -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end;}
+.align-end { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end;}
+.flex-wrap { -ms-flex-wrap: wrap; flex-wrap: wrap;}
+
+/* margin */
+.mg-t-at { margin-top: auto;}
+.mg-r-at { margin-right: auto;}
+.mg-l-at { margin-left: auto;}

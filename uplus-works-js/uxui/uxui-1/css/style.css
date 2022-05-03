@@ -1,0 +1,65 @@
+/* base */
+body { 
+    background: #323232;
+    padding: 50px 0;
+}
+body *, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+/* 작업 */
+.dm-btn-n10 {
+    display: block;
+    width: 40%;
+    max-width: 60px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+}
+.dm-btn-n10 .img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+.dm-btn-n10 .trans-3s {
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.dm-btn-n10:hover .-icon {
+    display: block;
+    transform: translateX(-60px);
+    -webkit-transform: translateX(-60px);
+    -moz-transform: translateX(-60px);
+    -ms-transform: translateX(-60px);
+    -o-transform: translateX(-60px);
+}
+.dm-btn-n10 .-txt {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(60px, -50%);
+    -webkit-transform: translate(60px, -50%);
+    -moz-transform: translate(60px, -50%);
+    -ms-transform: translate(60px, -50%);
+    -o-transform: translate(60px, -50%);
+    opacity: 0;
+}
+.dm-btn-n10:hover .-txt {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    opacity: 1;
+}

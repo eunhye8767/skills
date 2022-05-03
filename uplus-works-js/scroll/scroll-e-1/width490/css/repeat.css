@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+.a11y-hidden {
+    overflow: hidden;
+    position: absolute !important;
+    clip: rect(0,0,0,0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+}
+
+.w-100 { width: 100%;}
+.h-100 { height: 100%;}
+.wh-100 { width: 100%; height: 100%;}
+.img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* position */
+.pst-r  { position: relative;}
+.pst-ab { position: absolute;}
+.pst-ab.-tl-0 { top: 0; left: 0;}
+
+.over-hid { overflow: hidden;}
+
+/* font color */
+.color-wh { color: #fff;}
+.color-1  { color: #d16f92;}
+
+/* font weight */
+.fw-100 { font-weight: 100;}
+.fw-200 { font-weight: 200;}
+.fw-300 { font-weight: 300;}
+.fw-400 { font-weight: 400;}
+.fw-500 { font-weight: 500;}
+.fw-700 { font-weight: 700;}
+.fw-900 { font-weight: 900;}
+
+/* text align */
+.ta-l { text-align: left;}
+.ta-c { text-align: center;}
+.ta-r { text-align: right;}
+
+/* bar right */
+.bar { position: relative;}
+.bar.-v1::after { 
+    content: '';
+    width: .2rem;
+    height: 100%;
+    background: rgba(0,0,0,.2);
+    position: absolute;
+    top: .1rem;
+    left: .1rem;
+}
+
+/* border radius */
+.bd-r-50 {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+/* background */
+.bg-norepeat { background-repeat: no-repeat;}
+.bg-pst-tc { background-position: top center;}
+
+/* display */
+.dp-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.just-cen {
+    -webkit-box-pack: center;
+       -ms-flex-pack: center;
+     justify-content: center;
+}
+.just-right {
+    -webkit-box-pack: right;
+       -ms-flex-pack: right;
+     justify-content: right;
+}
+.flex-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+}
+.align-cen {
+    -webkit-box-align: center;
+       -ms-flex-align: center;
+          align-items: center;
+}
+.align-end {
+    -webkit-box-align: end;
+       -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+/* font size */
+.fz-18 { font-size: 1.8rem;}
+.fz-22 { font-size: 2.2rem;}
+.fz-40 { font-size: 4rem;}
+.fz-50 { font-size: 5rem;}
+
+/* line-height */
+.line-h11 { line-height: 1.1;}
+.line-h12 { line-height: 1.2;}
+.line-h14 { line-height: 1.4;}
+
+/* margin */
+.mg-t-10 { margin-top: 1rem;}
+.mg-t-20 { margin-top: 2rem;}
+.mg-t-30 { margin-top: 3rem;}
+
+.mg-b-40 { margin-bottom: 4rem;}
+
+.mg-b-10p { margin-bottom: 10%;}
+
+/* padding */
+.pd-l-20 { padding-left: 2rem;}
+.pd-r-20 { padding-right: 2rem;}
+.pd-b-60 { padding-bottom: 6rem;}

@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/* base */
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+}
+body {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    -webkit-text-size-adjust:none;
+    background: transparent;
+    font-family: '맑은 고딕','Malgun Gothic','애플 SD 산돌고딕 Neo','Apple SD Gothic Neo','Helvetica Neue','Helvetica',sans-serif;
+    font-size: 1.6rem;
+    color: #fff;
+    word-break: keep-all;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+}
+body *, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    line-height: .7;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* 작업 */
+#container {
+    width: 49rem;
+    height: 74.9rem;
+    margin: 5rem auto;
+    background: url('../img/bg.jpg') center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container>div { width: 30rem;}
+#container svg {
+    display: inline-block;
+    width: 100%;
+}
+#container path {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 10;
+}

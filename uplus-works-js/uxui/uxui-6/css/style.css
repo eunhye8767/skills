@@ -1,0 +1,214 @@
+/* base */
+html, body { 
+    height: 100%;
+    overflow: hidden;
+}
+body { 
+    background: #f0f0f0;
+    font-family: 'Montserrat', sans-serif;
+    color: #1c252e;
+}
+body *, *::before, *::after {
+    line-height: 1;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+img { 
+    width: 100%;
+    max-width: 100%;
+}
+
+/* 작업 */
+.trans-400ms {
+    transition: 400ms ease-in-out;
+    -webkit-transition: 400ms ease-in-out;
+    -moz-transition: 400ms ease-in-out;
+    -o-transition: 400ms ease-in-out;
+}
+.trans-700ms {
+    transition: 700ms ease-in-out;
+    -webkit-transition: 700ms ease-in-out;
+    -moz-transition: 700ms ease-in-out;
+    -o-transition: 700ms ease-in-out;
+}
+
+#case-btn-04,
+#bttnCart-04-box .bttnCart-04 .bttn.-txt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+#case-btn-04 { height: 100vh;}
+#bttnCart-04-box {
+    width: 200px;
+    height: 60px;
+}
+#bttnCart-04-box .bttnCart-04 {
+    width: 100%;
+    height: 100%;
+    background: #08c2c2;
+    border: 1px solid #05adad;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    outline: 0;
+    overflow: hidden;
+    position: relative;
+}
+#bttnCart-04-box .bttnCart-04 .bttn { position: absolute;}
+#bttnCart-04-box .bttnCart-04 .bttn.-txt {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+#bttnCart-04-box .bttnCart-04 .bttn.-txt .plus {
+    margin-right: 10px;
+    font-size: 30px;
+    font-weight: normal;
+}
+#bttnCart-04-box .bttnCart-04 .bttn.-txt .plus::before { content: '\002B';}
+#bttnCart-04-box .bttnCart-04 .bttn.-icon {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-8em, -50%);
+    -webkit-transform: translate(-8em, -50%);
+    -moz-transform: translate(-8em, -50%);
+    -ms-transform: translate(-8em, -50%);
+    -o-transform: translate(-8em, -50%);
+}
+#bttnCart-04-box .bttnCart-04 .bttn.-icon .icon-cart-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#bttnCart-04-box .bttnCart-04 .bttn.-icon .icon-cart-wrap.-z-index { z-index: 5;}
+#bttnCart-04-box .bttnCart-04 .bttn.-icon .icon-cart-wrap>svg {
+    display: inline-block;
+}
+#bttnCart-04-box .bttnCart-04 .bttn.-icon #icon-cart {
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+    transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+}
+#bttnCart-04-box .bttnCart-04 .bttn.-icon #icon-cart #clip-rectBox {
+    -webkit-clip-path: url(#clip-cart);
+    clip-path: url(#clip-cart);
+}
+#bttnCart-04-box .bttnCart-04 .bttn.-icon #icon-cart #clip-rectBox rect {
+    width: 100%;
+    height: 0%;
+    fill: #fff;
+    -webkit-transform: translateY(60%);
+       -moz-transform: translateY(60%);
+        -ms-transform: translateY(60%);
+         -o-transform: translateY(60%);
+            transform: translateY(60%);
+}
+#bttnCart-04-box .bttnCart-04 .bttn.-icon .cart-ckmc-size {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 29%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+#bttnCart-04-box .bttnCart-04 .bttn.-icon #cart-ckmc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#bttnCart-04-box .bttnCart-04 .bttn.-icon #cart-ckmc #cart-ckmc-path{
+    fill: none;
+    stroke-width: 6;
+    stroke: #08c2c2;
+    stroke-dasharray: 0 100;
+}
+#bttnCart-04-box .bttnCart-04.loading {
+    transform: scale(.9);
+}
+#bttnCart-04-box .bttnCart-04.loading .bttn.-txt {
+    transform: translateY(-100%);
+}
+#bttnCart-04-box .bttnCart-04.loading .bttn.-txt .plus {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+#bttnCart-04-box .bttnCart-04.loading .bttn.-icon {
+    -webkit-animation: cart-translate 3.3s .4s ease-in-out forwards;
+       -moz-animation: cart-translate 3.3s .4s ease-in-out forwards;
+         -o-animation: cart-translate 3.3s .4s ease-in-out forwards;
+            animation: cart-translate 3.3s .4s ease-in-out forwards;
+}
+#bttnCart-04-box .bttnCart-04.loading .bttn.-icon #icon-cart,
+#bttnCart-04-box .bttnCart-04.loading .bttn.-icon #cart-ckmc {
+    -webkit-animation: cart-deg 3.3s .5s ease-in-out forwards;
+    -moz-animation: cart-deg 3.3s .5s ease-in-out forwards;
+      -o-animation: cart-deg 3.3s .5s ease-in-out forwards;
+         animation: cart-deg 3.3s .5s ease-in-out forwards;
+}
+#bttnCart-04-box .bttnCart-04.loading .bttn.-icon #icon-cart #clip-rectBox rect {
+    -webkit-animation: rect .5s 1.3s ease-in-out forwards;
+       -moz-animation: rect .5s 1.3s ease-in-out forwards;
+         -o-animation: rect .5s 1.3s ease-in-out forwards;
+            animation: rect .5s 1.3s ease-in-out forwards;
+}
+#bttnCart-04-box .bttnCart-04.loading .bttn.-icon #cart-ckmc #cart-ckmc-path{
+    -webkit-animation: cart-path 2s 1.3s ease-in-out forwards;
+    -moz-animation: cart-path 2s 1.3s ease-in-out forwards;
+      -o-animation: cart-path 2s 1.3s ease-in-out forwards;
+         animation: cart-path 2s 1.3s ease-in-out forwards;
+}
+
+@keyframes cart-deg {
+    0%,100% { transform: rotate(-15deg);}
+    30%,75% { transform: rotate(0deg);}
+}
+@keyframes cart-translate {
+    0% {transform: translate(-8em, -50%);}
+    30%,75% {transform: translate(-50%, -50%);}
+    100% {transform: translate(8em, -50%);}
+}
+@keyframes rect {
+    0% { height: 0%; transform: translateY(65%);}
+    10% { height: 5%; transform: translateY(60%);}
+    20% { height: 10%; transform: translateY(55%);}
+    30% { height: 15%; transform: translateY(50%);}
+    50% { height: 25%; transform: translateY(40%);}
+    70% { height: 35%; transform: translateY(31%);}
+    100% { height: 45.4%; transform: translateY(21%);}
+}
+@keyframes cart-path {
+    0%, 35% { stroke-dasharray: 0 100;}   
+    70%, 100% { stroke-dasharray: 100;}   
+}

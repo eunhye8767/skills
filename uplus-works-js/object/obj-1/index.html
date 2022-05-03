@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미러볼회전효과</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="demo22">
+        <div class="demo22-wrap">
+            <div class="demo22-img">
+                <div style="display: block;"><img src="img/demo22_1.jpg" alt=""></div>
+                <div style="display: none;"><img src="img/demo22_2.jpg" alt=""></div>
+                <div style="display: none;"><img src="img/demo22_3.jpg" alt=""></div>
+                <div style="display: none;"><img src="img/demo22_4.jpg" alt=""></div>
+            </div>
+            <div class="glitch-wrap">
+                <div class="glitch-img -n1"></div>
+                <div class="glitch-img -n2"></div>
+                <div class="glitch-img -n3"></div>
+                <div class="glitch-img -line"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        var $imgList = $('.demo22-img>div');	// bgwrap div 안에 있는 div 자식들을 가져옴
+        var nImgCount = $imgList.children().length;		// 위에서 가져온 div 자식들의 개수
+        var nDuration = 500;							// 이미지를 변경할 시간 (3000 = 3초)
+        var bAuto = true;								// 자동으로 변경할 지 여부
+        var nIndex = 0;									// 변경할 이미지의 Index
+        
+        if(bAuto == true) {
+            setInterval(autoSlide, nDuration);			// Javascript setInterval 함수 호출
+        }
+        
+        function autoSlide() {
+            /* 1초마다 이 함수에 들어오게 됨 */
+            // % 연산은 나누기를 한 후 나머지 값을 가져오는 연산입니다.
+            // nImgCount = 4
+            /*
+                nIndex = 0
+                ++nIndex = 1
+                (++nIndex % nImageCount) = (1 % 4 = 1)
+                $($imgList.get(0)).fadeOut(1000);	// 0 Index에 있는 이미지를 fadeOut
+                $($imgList.get(1)).fadeIn(1000);	// 1  Index에 있는 이미지를 fadeIn
+            */
+            /*
+                nIndex = 1
+                ++nIndex = 2
+                (++nIndex % nImageCount) = (2 % 4 = 2)
+                $($imgList.get(1)).fadeOut(1000);	// 1 Index에 있는 이미지를 fadeOut
+                $($imgList.get(2)).fadeIn(1000);	// 2 Index에 있는 이미지를 fadeIn
+            */
+            var next = (++nIndex % nImgCount);
+            $($imgList.get(next - 1)).fadeOut(0);
+            $($imgList.get(next)).fadeIn(0);
+        }
+    </script>
+   
+</body>
+</html>

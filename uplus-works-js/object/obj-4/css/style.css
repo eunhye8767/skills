@@ -1,0 +1,236 @@
+/* base */
+body {
+    background: transparent;
+    font-family: 'Gothic A1','맑은 고딕','Malgun Gothic','애플 SD 산돌고딕 Neo','Apple SD Gothic Neo','Helvetica Neue','Helvetica',sans-serif;
+    font-size: 16px;
+    color: #444;
+    word-break: keep-all;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+}
+body *, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    line-height: .95;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* 작업 */
+#slide-wrap {
+    position: relative;
+    height: 80vh;
+    min-height: 700px;
+    max-height: 800px;
+    overflow: hidden;
+}
+.slide-bg {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slide-bg.-n1 { background-image: url("../img/bg1.jpg");}
+.slide-bg.-n2 { background-image: url("../img/bg2.jpg");}
+.slide-bg.-n3 { background-image: url("../img/bg3.jpg");}
+.slide-bg.-n4 { background-image: url("../img/bg4.jpg");}
+
+#circle-motion {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+#circle-motion .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border: 1px solid #ff8531;
+}
+
+.mt-slide {
+    animation: mt-slide 1s ease-in-out;
+    -webkit-animation: mt-slide 1s ease-in-out;
+    -moz-animation: mt-slide 1s ease-in-out;
+    -o-animation: mt-slide 1s ease-in-out;
+}
+.cc-mt {
+    -webkit-animation-duration: 5s;
+       -moz-animation-duration: 5s;
+         -o-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-delay: 1s;
+       -moz-animation-delay: 1s;
+         -o-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+       -moz-animation-timing-function: ease-in-out;
+         -o-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+       -moz-animation-iteration-count: infinite;
+         -o-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+.cc-mt.-lf-1 {
+    transform: translateX(3px);
+    -webkit-transform: translateX(3px);
+    -moz-transform: translateX(3px);
+    -ms-transform: translateX(3px);
+    -o-transform: translateX(3px);
+    animation-name: mt-lf-1;
+    -webkit-animation-name: mt-lf-1;
+    -moz-animation-name: mt-lf-1;
+    -o-animation-name: mt-lf-1;
+}
+.cc-mt.-lf-2 {
+    transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
+    -moz-transform: translateX(-5px);
+    -ms-transform: translateX(-5px);
+    -o-transform: translateX(-5px);
+    animation-name: mt-lf-2;
+    -webkit-animation-name: mt-lf-2;
+    -moz-animation-name: mt-lf-2;
+    -o-animation-name: mt-lf-2;
+}
+.cc-mt.-tb-1 {
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    animation-name: mt-tb-1;
+    -webkit-animation-name: mt-tb-1;
+    -moz-animation-name: mt-tb-1;
+    -o-animation-name: mt-tb-1;
+}
+.cc-mt.-tb-2 {
+    transform: translateY(7px);
+    -webkit-transform: translateY(7px);
+    -moz-transform: translateY(7px);
+    -ms-transform: translateY(7px);
+    -o-transform: translateY(7px);
+    animation-name: mt-tb-2;
+    -webkit-animation-name: mt-tb-2;
+    -moz-animation-name: mt-tb-2;
+    -o-animation-name: mt-tb-2;
+}
+
+#slide-txtWrap,
+.slide-txtBox,
+.slide-txtBox .slide-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+#slide-txtWrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.slide-txtBox {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+}
+.slide-txtBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.slide-txtBox .slide-title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+}
+.slide-txtBox .slide-title::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    margin: 20px auto;
+    background: #444;
+}
+.slide-txtBox .title {
+    font-size: 28px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.slide-txtBox .sub-title {
+    margin-bottom: 15px;
+    padding: 6px 12px 4px;
+    background: #ea6310;
+    font-weight: 500;
+    color: #fff;
+    -ms-flex-item-align: center;
+     -ms-grid-row-align: center;
+             align-self: center;
+}
+.slide-txtBox .explanation-txt {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.slide-txtBox .explanation-txt>b { font-weight: 600;}
+.scroll-box { 
+    margin-top: 35px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.scroll-box>p:first-of-type { margin-bottom: 10px;}
+.icon-scroll { 
+    display: block;
+    width: 20px;
+    margin: 0 auto;
+    animation: move-tb 1s ease-in-out infinite;
+    -webkit-animation: move-tb 1s ease-in-out infinite;
+    -moz-animation: move-tb 1s ease-in-out infinite;
+    -o-animation: move-tb 1s ease-in-out infinite;
+}
+.icon-scroll::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: url('../img/icon-arrow-dw.png') no-repeat center;
+    background-size: cover;
+}
+.icon-scroll.-n2 {
+    margin-top: 3px;
+    animation-delay: .5s;
+    -webkit-animation-delay: .5s;
+    -moz-animation-delay: .5s;
+    -o-animation-delay: .5s;
+}

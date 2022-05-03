@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전송버튼모션</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="container">
+        <div id="bttn-box">
+            <div id="bttn-send" onclick="click_on()" class="on">
+                <div class="bttn-back">Sent!</div>
+                <div class="bttn-front">
+                    <span class="txt">SEND</span>
+                    <span class="icon-box"><img src="img/icon-send.svg" alt=""></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        function click_on(){
+            var bttn_name = $('#bttn-send');
+            bttn_name.attr('class','click-on');
+            setTimeout(function(){
+                // bttn_name.removeClass('click-on');
+                bttn_name.attr('class','-m-left');
+            }, 3000);
+            // bttn_name.removeClass('-m-left');
+        }
+    </script>
+
+</body>
+</html>

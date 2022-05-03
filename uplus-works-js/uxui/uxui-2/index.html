@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="icon" type="image/png" href="../../images/favicon.png" sizes="32x32" />
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+<title>Design Team Library</title>
+
+<link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/inline.css" rel="stylesheet">
+</head>
+<body>
+	<div id="root">
+		<div class="wrapper">
+
+			<div id="case07">
+				<div id="case07-wrap">
+					<div class="cs24-box -ta-c">
+						<h3 class="title">
+							<small>hulu</small>
+							Get 1 month free, then starts at
+						</h3>
+						<div class="price-box">
+							<div class="txt-price">5.99</div>
+							<div class="txt-mon"></div>
+						</div>
+						<button class="dm24-btn -v1">select plan</button>
+					</div>
+					<div class="cs24-box -t-line -mg-pd-box">
+						<ul class="info-txtBox">
+							<li>
+								<p>
+									Watch on your favorite devices
+								</p>
+							</li>
+							<li>
+								<p>
+									Switch plans or cancel anytime
+								</p>
+							</li>
+						</ul>
+						<div id="tg-contents-01" style="display: none;">
+							<h5>AVAILABLE ADD-ONS</h5>
+							<p>No Ads</p>
+							<p>HBO®</p>
+						</div>
+					</div>
+					<div class="cs24-box -t-line -btnBox">
+						<button class="dm24-btn -v2 -add-ons" type="button" onclick="addOns_click('01');">
+							<span id="tg-txt-01" class="tg-txt -on">Add-ons</span>
+						</button>
+					</div>
+				</div>
+				<div id="case07-wrap">
+					<div class="cs24-box -ta-c">
+						<h3 class="title">
+							<small>hulu</small>
+							Get 1 month free, then starts at
+						</h3>
+						<div class="price-box">
+							<div class="txt-price">5.99</div>
+							<div class="txt-mon"></div>
+						</div>
+						<button class="dm24-btn -v1">select plan</button>
+					</div>
+					<div class="cs24-box -t-line -mg-pd-box">
+						<ul class="info-txtBox">
+							<li>
+								<p>
+									Watch on your favorite devices
+								</p>
+							</li>
+							<li>
+								<p>
+									Switch plans or cancel anytime
+								</p>
+							</li>
+						</ul>
+						<div id="tg-contents-02" style="display: none;">
+							<h5>AVAILABLE ADD-ONS</h5>
+							<p>No Ads</p>
+							<p>HBO®</p>
+						</div>
+					</div>
+					<div class="cs24-box -t-line -btnBox">
+						<button class="dm24-btn -v2 -add-ons" type="button" onclick="addOns_click('02');">
+							<span id="tg-txt-02" class="tg-txt -on">Add-ons</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		// add-ons 열고 닫기
+		function addOns_click(seq) {
+			var toggle = $("#tg-contents-" + seq).toggle();
+			$("#tg-txt-" + seq).toggleClass('-on');
+		}
+	</script>
+</div>
+
+</body>
+</html>

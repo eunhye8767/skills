@@ -1,0 +1,10 @@
+@keyframes move-1 {
+	0% { transform: rotate(0) translate(0, -2%);}
+	50% { transform: rotate(180deg) translate(4%, 2%);}
+	100% { transform: rotate(360deg) translate(3%, 1%);}
+}
+@keyframes move-2 {
+	0% { transform: rotate(0) translate(0, 1.5%);}
+	50% { transform: rotate(180deg) translate(-3%, -2.5%);}
+	100% { transform: rotate(360deg) translate(3%, -2%);}
+}

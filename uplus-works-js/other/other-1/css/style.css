@@ -1,0 +1,88 @@
+/* base */
+body {
+    background: transparent;
+    font-family: '맑은 고딕','Malgun Gothic','애플 SD 산돌고딕 Neo','Apple SD Gothic Neo','Helvetica Neue','Helvetica',sans-serif;
+    font-size: 16px;
+    color: #000;
+    word-break: keep-all;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+}
+body *, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    line-height: 1;
+}
+
+/* 작업 */
+.color-1 { color: #fff}
+.color-2 { color: #76ee7e}
+.color-3 { color: #76777b}
+
+#wrap {
+    width: 100%;
+    height: 100vh;
+    padding: 60px 30px;
+    background: url('../img/comn22-bg.jpg') top center no-repeat;
+    background-size: cover;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    overflow: hidden;
+    opacity: 0;
+}
+#wrap.-active { opacity: 1;}
+#wrap span { display: inline-block;}
+#title-box { font-size: 48px;}
+#title-box h1 strong {
+    display: inline-block;
+    margin: 35px 0 30px; 
+    font-size: 96px;
+}
+#title-box::after {
+    content: '';
+    width: 48px;
+    height: 2px;
+    margin: 40px 0 30px;
+    background: #76ee7e;
+    display: block;
+    animation: line-move .5s 900ms ease-in-out both;
+    -webkit-animation: line-move .5s 900ms ease-in-out both;
+    -moz-animation: line-move .5s 900ms ease-in-out both;
+    -o-animation: line-move .5s 900ms ease-in-out both;
+}
+#info-box li>span {
+    font-size: 24px;
+    line-height: 1.6;
+}
+.-active .-ani {
+    position: relative;
+    animation: title-move .5s ease-in-out both;
+    -webkit-animation: title-move .5s ease-in-out both;
+    -moz-animation: title-move .5s ease-in-out both;
+    -o-animation: title-move .5s ease-in-out both;
+}
+.-active .-ani::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: #fff;
+    animation: width .5s ease-in-out both;
+    -webkit-animation: width .5s ease-in-out both;
+    -moz-animation: width .5s ease-in-out both;
+    -o-animation: width .5s ease-in-out both;
+}
+.-active .color-2 .-ani::after { background: #76ee7e;}
+.-active .color-3 .-ani::after { background: #76777b;}
+
+.-active .-ani.delay-v1, .-active .-ani.delay-v1::after { animation-delay: 300ms;}
+.-active .-ani.delay-v2, .-active .-ani.delay-v2::after { animation-delay: 600ms;}
+.-active .-ani.delay-v3, .-active .-ani.delay-v3::after { animation-delay: 1200ms;}
+.-active .-ani.delay-v4, .-active .-ani.delay-v4::after { animation-delay: 1500ms;}
+.-active .-ani.delay-v5, .-active .-ani.delay-v5::after { animation-delay: 1800ms;}
+.-active .-ani.delay-v6, .-active .-ani.delay-v6::after { animation-delay: 2100ms;}

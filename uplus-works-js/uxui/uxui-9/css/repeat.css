@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+body *, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    line-height: .7;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+button {
+    display: block;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.a11y-hidden {
+    overflow: hidden;
+    position: absolute !important;
+    clip:     rect(0,0,0,0);
+    width:    1px;
+    height:   1px;
+    margin:   -1px;
+    border:   0;
+    padding:  0;
+}
+
+.w-100 { width: 100%;}
+.h-100 { height: 100%;}
+.wh-100 { width: 100%; height: 100%;}
+
+.over-hid { overflow: hidden;}
+
+/* postion */
+.pst-r  { position: relative;}
+.pst-ab { position: absolute;}
+.pst-ab.-tl-0 { top: 0; left: 0;}
+
+/* background */
+.bg.-pst-tc { background-position: top center;}
+.bg.-pst-cr { background-position: center right;}
+.bg.-no-repeat { background-repeat: no-repeat;}
+.bg.-s-cover   { background-size: cover;}
+.bg.-s-contain { background-size: contain;}
+
+/* display */
+.dp-b  { display: block;}
+.dp-ib { display: inline-block;}
+.dp-flex, .flex-cen {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.just-start {
+    -webkit-box-pack: start;
+       -ms-flex-pack: start;
+     justify-content: flex-start;
+}
+.just-end {
+    -webkit-box-pack: end;
+       -ms-flex-pack: end;
+     justify-content: flex-end;
+}
+.just-cen, .flex-cen {
+    -webkit-box-pack: center;
+       -ms-flex-pack: center;
+     justify-content: center;
+}
+.align-start {
+    -webkit-box-align: start;
+       -ms-flex-align: start;
+          align-items: flex-start;
+}
+.align-end {
+    -webkit-box-align: end;
+       -ms-flex-align: end;
+          align-items: flex-end;
+}
+.align-cen, .flex-cen {
+    -webkit-box-align: center;
+       -ms-flex-align: center;
+          align-items: center;
+}
+.flex-wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.flex-column {
+    -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+}
+
+/* margin */
+.mg-l-at { margin-left: auto;}

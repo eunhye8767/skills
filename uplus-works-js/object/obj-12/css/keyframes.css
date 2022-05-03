@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+@keyframes tit-shake {
+    0% {
+        -ms-transform: rotateZ(5deg);
+        transform: rotateZ(5deg); 
+    }
+      100% {
+        -ms-transform: rotateZ(-5deg);
+        transform: rotateZ(-5deg); 
+    } 
+}

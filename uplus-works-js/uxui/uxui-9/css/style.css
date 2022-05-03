@@ -1,0 +1,110 @@
+@charset "UTF-8";
+ 
+/* base */
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+}
+body {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    -webkit-text-size-adjust:none;
+    background: #f0f0f0;
+    font-family: "Noto Sans Korean", '맑은 고딕','Malgun Gothic','애플 SD 산돌고딕 Neo','Apple SD Gothic Neo','Helvetica Neue','Helvetica',sans-serif;
+    font-size: 1.6rem;
+    color: #444;
+    word-break: keep-all;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+}
+body *, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    line-height: .7;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+a, a:visited, a:link, a:active {
+    color: currentColor;
+    text-decoration: none;
+}
+
+/* 작업 */
+* { cursor: none !important;}
+.cursor1 {
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: #57cac4;
+    transform: scale(0);
+}
+.cursor2 {
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+    width: 5rem;
+    height: 5rem;
+    background: transparent;
+    border: .1rem solid #fff;
+    border-radius: 50%;
+    transform: scale(0);
+}
+.cursor2::after { 
+    content: 'view';
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#container {
+    width: 49rem;
+    height: 74.9rem;
+    margin: 5rem auto;
+    position: relative;
+}
+#container>.bg { background-image: url('../img/bg.jpg');}
+#btn-arrow {
+    width: 14%;
+    padding-bottom: 14%;
+    position: absolute;
+    top: 45.5%;
+    right: 16%;
+    z-index: 20;
+}
+#btn-arrow .arrow { 
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#btn-arrow .txt-enter {
+    display: none;
+    height: 5.6rem;
+    position: absolute;
+    top: 0;
+    right: 117%;
+    overflow: hidden;
+}
+#btn-arrow .txt-enter>img {
+    width: auto;
+    max-width: none;
+    height: 100%;
+}
+#btn-arrow:hover .arrow + .txt-enter { display: block;}
+#btn-arrow:hover .arrow + .txt-enter>img {
+    animation: move-txt .3s ease-in-out;
+}

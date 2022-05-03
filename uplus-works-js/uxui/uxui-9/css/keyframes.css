@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+@keyframes move-txt {
+    0% { transform: translateY(100%);}
+    100% { transform: translateY(0);}
+}

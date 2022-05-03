@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/* base */
+body {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    -webkit-text-size-adjust:none;
+    background: transparent;
+    font-family: "Noto Sans Korean",'맑은 고딕','Malgun Gothic','애플 SD 산돌고딕 Neo','Apple SD Gothic Neo','Helvetica Neue','Helvetica',sans-serif;
+    font-size: 16px;
+    color: #fff;
+    word-break: keep-all;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+}
+body *, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    line-height: .7;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* 작업 */
+body {
+    font-family: 'Roboto Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #262626;
+}
+#container {
+    width: 490px;
+    height: 749px;
+    background: url('../img/bg.jpg') center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 { font-size: 50px;}
+h1 span { word-spacing: -0.3em;}
+.char { 
+    font-variation-settings: 'wght' var(--weight, 200);
+    color: hsl(var(--primary-HS), calc(var(--saturation) * 1%), 100%);
+}
+h1 span:nth-of-type(1)>span:nth-of-type(1)  { color: hsl(0, 100%, 68%);}
+h1 span:nth-of-type(1)>span:nth-of-type(2)  { color: hsl(21, 100%, 68%);}
+h1 span:nth-of-type(1)>span:nth-of-type(3)  { color: hsl(44, 100%, 68%);}
+h1 span:nth-of-type(1)>span:nth-of-type(4)  { color: hsl(110, 63%, 65%);}
+h1 span:nth-of-type(1)>span:nth-of-type(5)  { color: hsl(159, 68%, 62%);}
+h1 span:nth-of-type(1)>span:nth-of-type(6)  { color: hsl(192, 82%, 61%);}
+h1 span:nth-of-type(1)>span:nth-of-type(7)  { color: hsl(216, 82%, 61%);}
+h1 span:nth-of-type(1)>span:nth-of-type(8)  { color: hsl(258, 82%, 61%);}
+
+h1 span:nth-of-type(3)>span:nth-of-type(1)  { color: hsl(280, 82%, 61%);}
+h1 span:nth-of-type(3)>span:nth-of-type(2)  { color: hsl(319, 82%, 61%);}
+h1 span:nth-of-type(3)>span:nth-of-type(3)  { color: hsl(342, 82%, 61%);}
+h1 span:nth-of-type(3)>span:nth-of-type(4)  { color: hsl(0, 100%, 68%);}
+h1 span:nth-of-type(3)>span:nth-of-type(5)  { color: hsl(21, 96%, 63%);}
